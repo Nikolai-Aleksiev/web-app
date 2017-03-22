@@ -1,0 +1,116 @@
+<script type="text/x-kendo-template" id="profile-page-template">
+
+    <div class="container" id='profile-container'>
+
+        <div class='col-sm-6'>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <label class="k-label" data-bind='text: displayNameText'></label>
+            </div>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <input class="k-textbox full-width" data-bind='value: displayName' />
+            </div>
+
+        </div>
+
+        <div class='col-sm-6'>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <label class="k-label">Email:</label>
+            </div>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <input class="k-textbox full-width" data-bind='value: email' />
+            </div>
+
+        </div>
+
+        <div class='col-sm-6'>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <label class="k-label">Birth Day:</label>
+            </div>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <input data-role='datepicker' class='full-width' data-bind='value: birthDay' />
+            </div>
+
+        </div>
+
+        <div class='col-sm-6'>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <label class="k-label">Marital Status:</label>
+            </div>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <input data-role="dropdownlist" class="full-width" data-bind='value: maritalStatus,
+                source: maritalStatuses' />
+            </div>
+
+        </div>
+
+        <div class='col-sm-6'>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <label class="k-label">Address Line 1:</label>
+            </div>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <input class="k-textbox full-width" data-bind='value: address1' />
+            </div>
+
+        </div>
+
+
+        <div class='col-sm-6'>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <label class="k-label">Gender:</label>
+            </div>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <input data-role='dropdownlist' data-bind='value: gender, source: genders, events: { change: selectLabels }' class="full-width" />
+            </div>
+
+        </div>
+
+        <div class='col-sm-6'>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <label class="k-label">Address Line 2:</label>
+            </div>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <input class="k-textbox full-width" data-bind='value: address2' />
+            </div>
+
+        </div>
+
+        <div class='col-sm-6'>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <label class="k-label">Photo:</label>
+            </div>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <input name="files" type="file" data-role="upload" class="full-width" data-bind='events: { select: onSelect }' />
+            </div>
+
+        </div>
+
+        <div class='col-sm-6'>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <button data-role='button' data-bind='events: { click: updateProfile }' class='full-width form-button update-profile-button k-primary'>Update Profile</button>
+                <div data-role="notification" id="update-notification"></div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+
+</script>

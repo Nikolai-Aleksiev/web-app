@@ -1,0 +1,121 @@
+<script type="text/x-kendo-template" id="dashboard-page-template">
+
+
+
+
+        <div class="header-container">
+            <div id="form">
+                <span class="label">Item Name</span>
+                <input class="k-textbox" required name="Item Name" data-bind="value: itemName" />
+                <div>
+                    <button data-role="button" data-bind="events: { click: addItem }">Add New Item</button>
+                    <button data-role="button" data-bind="events: { click: saveItems }">Post Items to Server</button>
+                </div>
+            </div>
+            <div class="persist-container">
+                <button data-role="button" data-bind="events: { click: persistLayout }">Persist Layout</button>
+            </div>
+        </div>
+
+
+        <div class="wrapper">
+            <div id="splitter1" data-role="splitter" data-orientation="vertical">
+
+                <div data-role="splitter" id="splitter2">
+                    <div id="pane0"></div>
+                    <div id="pane1"></div>
+                    <div data-role="splitter" id="splitter4" data-orientation="vertical">
+                        <div id="pane2"></div>
+                        <div id="pane3"></div>
+                    </div>
+                    <div id="pane4"></div>
+                    <div data-role="splitter" id="splitter5" data-orientation="vertical">
+                        <div id="pane5"></div>
+                        <div id="pane6"></div>
+                    </div>
+                    <div id="pane7"></div>
+                </div>
+
+
+                <div data-role="splitter" id="splitter3">
+                    <div id="pane8"></div>
+                    <div id="pane9"></div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    <div data-role="window" data-title="Item Details" data-width="320" data-height="300" data-bind="visible: openWindow">
+        <div data-bind="visible: isViewMode">
+            <table class='item-edit-table'>
+                <tr>
+                    <td>ID:</td>
+                    <td><span data-bind="text: selectedItem.id"></span></td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><span data-bind="text: selectedItem.name"></span></td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td><span data-bind="text: selectedItem.description"></span></td>
+                </tr>
+                <tr>
+                    <td>Category:</td>
+                    <td><span data-bind="text: selectedItem.category"></span></td>
+                </tr>
+            </table>
+            <button data-role="button" data-bind="events: { click: switchToEditMode }">Edit</button>
+        </div>
+        <div data-bind="visible: isEditMode">
+            <table class='item-edit-table'>
+                <tr>
+                    <td>ID:</td>
+                    <td><span data-bind="text: selectedItem.id"></span></td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><input class="table-item" data-bind="value: selectedItem.name" /></td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td><input class="table-item" data-bind="value: selectedItem.description" /></td>
+                </tr>
+                <tr>
+                    <td>Category:</td>
+                    <td><span data-bind="text: selectedItem.category"></span></td>
+                </tr>
+            </table>
+            <button data-role="button" data-bind="events: { click: switchToViewMode }">Update</button>
+            <button data-role="button" data-bind="events: { click: switchToCancelMode }">Cancel</button>
+        </div>
+    </div>
+
+
+</script>
+
+
+<script type="text/x-kendo-template" id="category-template">
+    <div class="header">
+        <span class="title">#: title #</span>
+        <span class="k-icon k-i-#: icon # right"></span>
+    </div>
+    <div data-role="sortable" id="#: id #" class="body">
+    </div>
+</script>
+
+
+<script type="text/x-kendo-template" id="item-template">
+    <div>
+        <div id="#: id #" class="item">
+            <span class="k-icon k-i-close right" data-bind="events: { click: deleteItem }"></span>
+            <span class="k-icon k-i-custom right" data-bind="events: { click: editItem }"></span>
+            <div>Name: #: name #</div>
+            <div class="item-category">Category: #: category #</div>
+        </div>
+    </div>
+</script>

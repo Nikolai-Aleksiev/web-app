@@ -1,0 +1,96 @@
+  .item-edit-table {
+        border: 1px solid #122658;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        background-color: #42d3b8;
+      }
+   .item-edit-table   td {
+        border: 1px solid #122658;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      .table-item {
+        border-radius: 5px;
+      }
+      .k-scrollable.k-splitter {
+        overflow: hidden;
+      }
+      .k-pane.k-scrollable {
+        overflow: hidden;
+      }
+      .label {
+        display: block;
+      }
+      .header-container {
+        border: 1px solid black;
+        padding: 10px;
+        margin-bottom: 10px;
+        height: 110px;
+        border-radius: 5px;
+      }
+      #form {
+        display: inline-block;
+        width: 70%;
+      }
+      .persist-container {
+        float: right;
+        position: relative;
+        width: 20%;
+        height: 100%;
+      }
+      .persist-container > button {
+        position: absolute;
+        right:    0;
+        bottom:   0;
+      }
+
+      .k-textbox {
+        margin-bottom: 10px;
+      }
+      .wrapper {
+        -webkit-user-select: none;
+        height: 600px;
+        width: 1400px;
+      }
+      .title {
+        display: inline-block;
+        max-width: 70%;
+        white-space: nowrap;
+        overflow: hidden;    
+        text-overflow: ellipsis;
+      }
+      .item {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 100%;
+        background-color: #FF7A40;
+        border-radius: 5px;
+        padding: 3px 8px 3px 8px;
+        margin: 2px 0;
+      }
+      .item:hover {
+        cursor: pointer;
+      }
+      .body {
+        overflow: auto;
+        height: 100%;
+        border: 1px solid transparent;
+        background-color: #F0F0F0;
+      }
+      .dropBorder {
+        border: 1px dashed red;
+      }
+      .header {
+        padding: 3px 8px 3px 8px;
+        background-color: #42d3b8;
+        border-radius: 2px;
+      }
+      .right {
+        float: right;
+      }
+      .lightCyan { 
+        background-color: #F0F0F0; 
+      }
+      .cyan { 
+        background-color: #01bde0; 
+      }

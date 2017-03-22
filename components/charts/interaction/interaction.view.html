@@ -1,0 +1,33 @@
+<script type="text/x-kendo-template" id="interaction-page-template">
+
+
+    <div class="container-fluid">
+
+        <div class='col-sm-12'>
+
+            <div id="chartContainer">
+                <div id="chart"></div>
+            </div>
+            <button data-role="button" data-bind="events: { click: showRedButton }">Show Red Marker</button>
+            <button data-role="button" data-bind="events: { click: showRedAndBlueButton }">Show Red and Blue Marker</button>
+            <button data-bind="events: { mousedown: moveOrangeMarkerLeft, mouseout: stopOrangeMarker, mouseup: stopOrangeMarker }" class="k-button">Move Orange Marker to the left</button>
+            <button data-bind="events: { mousedown: moveOrangeMarkerRight, mouseout: stopOrangeMarker, mouseup: stopOrangeMarker }" class="k-button">Move Orange Marker to the right</button>
+            <button data-role="button" data-bind="events: { click: zoomOut }">Zoom Out</button>
+            <button data-role="button" data-bind="events: { click: zoomIn }">Zoom In</button>
+            <button data-role="button" data-bind="events: { click: exportToPdf }">Export to PDF</button>
+        </div>
+        
+        <div class='col-sm-12'>
+
+            <p style='margin-top: 25px;'>
+                <input type="text" data-bind="value: crossingPoint" class="k-textbox orange-color" />
+            </p>
+
+        </div>
+
+
+
+    </div>
+
+
+</script>

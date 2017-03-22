@@ -1,0 +1,54 @@
+<script type="text/x-kendo-template" id="blog-page-template">
+
+
+    <div class="container">
+
+        <div class="col-sm-12">
+            <div id='activities-view'></div>
+        </div>
+
+        <div class="col-sm-12">
+            <textarea id="activities-add" rows="10" cols="30"></textarea>
+        </div>
+
+        <div class="col-sm-12">
+
+        </div>
+
+
+    </div>
+
+
+</script>
+
+
+<script type="text/x-kendo-template" id="acitivities-view-template">
+
+
+    <div class='acitivities-item'>
+
+        <div class='acitivities-item-header'>
+            <span>
+                Likes
+                <span class='acitivities-likes-count'>
+                    # if ( data.Likes ) { 
+                        data.likesCount = data.Likes.length;
+                    } 
+                    else {
+                        data.likesCount = 0;
+                    } #
+
+                    (#: likesCount #)
+                </span>
+            </span>
+        </div>
+
+        <div class='acitivities-item-body'>
+            <img class='activity-image' src=" # if (data['PictureUrl']) { # #: data['PictureUrl'] # # } else { # /resources/images/default.png  # } #" />
+            <span>#: Text #</span>
+        </div>
+
+    </div>
+
+
+</script>

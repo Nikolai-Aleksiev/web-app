@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Kendo UI Demo</title>
+
+
+	<!-- inject:css -->
+	<link rel="stylesheet" href="/components/blog/blog.styles.css">
+	<link rel="stylesheet" href="/components/dashboard/dashboard.styles.css">
+	<link rel="stylesheet" href="/components/login/login.styles.css">
+	<link rel="stylesheet" href="/components/logout/logout.styles.css">
+	<link rel="stylesheet" href="/components/register/register.styles.css">
+	<link rel="stylesheet" href="/components/grid/grid.styles.css">
+	<link rel="stylesheet" href="/components/charts/advanced/advanced.styles.css">
+	<link rel="stylesheet" href="/components/charts/filter/filter.styles.css">
+	<link rel="stylesheet" href="/components/charts/stacked/stacked.styles.css">
+	<link rel="stylesheet" href="/components/charts/interaction/interaction.styles.css">
+	<link rel="stylesheet" href="/components/profile/model/profile.styles.css">
+	<link rel="stylesheet" href="/components/profile/dataSource/dsProfile.styles.css">
+	<!-- endinject -->
+
+	<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA/4QAAB7PGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiIRERAAAAIiIREiIRAAESIREiIiEQARERESIiIhARESIRESIiIRESIiEREiIhESIiIhESIiERIiIiERIiIREiIiERESIRESIiIREREREREiIRERERERESIhEREiERAREiERIiIRABEREhEiIhEAARERESIiEAAAAREREiAADwDwAAwAMAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAMADAADwDwAA"
+	 rel="icon" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.common-bootstrap.min.css" />
+	<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.rtl.min.css" />
+	<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.bootstrap.min.css" />
+	<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.mobile.all.min.css" />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
+
+	<link rel="stylesheet" href="styles/styles.css" />
+
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="http://kendo.cdn.telerik.com/2017.1.118/js/kendo.all.min.js"></script>
+	<script src="https://bs-static.cdn.telerik.com/1.9.2/everlive.all.min.js"></script>
+
+	<!--<script src="http://kendo.cdn.telerik.com/2017.1.118/js/messages/kendo.messages.bg-BG.min.js"></script>-->
+
+</head>
+
+<body>
+
+
+	<div class="container-fluid">
+
+		<div class='row'>
+
+			<div class="col-sm-4">
+				<ul id="main-menu">
+					<li>Charts
+						<ul>
+							<li>Chart Filtering</li>
+							<li>Stacked Chart</li>
+							<li>Chart Interaction</li>
+							<li>Advanced Filtering</li>
+						</ul>
+					</li>
+					<li>Dashboard</li>
+					<li>Grid</li>
+					<li>Blog</li>
+
+				</ul>
+			</div>
+
+			<div class="col-sm-4">
+				<h1 class="app-title">BGO Shop</h1>
+				<ul id="menu-element"> </ul>
+			</div>
+
+			<div class="col-sm-4">
+				<ul class="account-menu" id='login-menu'>
+					<li>Login</li>
+					<li>Register</li>
+				</ul>
+				<ul class="account-menu" id='profile-menu'>
+					<li>DS Profile</li>
+					<li>Profile</li>
+					<li>Logout</li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+	<span id="notification" style="display:none;"></span>
+
+	<section id='container'>
+
+	</section>
+
+	<section id='templates-container'>
+
+
+		<script id="successTemplate" type="text/x-kendo-template">
+			<div class="update-success">
+				<img src="https://demos.telerik.com/kendo-ui/content/web/notification/success-icon.png" />
+				<h3>#= message #</h3>
+			</div>
+		</script>
+
+
+	</section>
+
+
+	<!-- inject:js -->
+	<script src="/components/core/app.js"></script>
+	<script src="/components/core/router.service.js"></script>
+	<script src="/components/core/settings.service.js"></script>
+	<script src="/components/core/view-loader.service.js"></script>
+	<script src="/components/blog/blog.controller.js"></script>
+	<script src="/components/dashboard/dashboard.controller.js"></script>
+	<script src="/components/login/login.controller.js"></script>
+	<script src="/components/logout/logout.controller.js"></script>
+	<script src="/components/register/register.controller.js"></script>
+	<script src="/components/grid/grid.controller.js"></script>
+	<script src="/components/charts/advanced/advanced.controller.js"></script>
+	<script src="/components/charts/filter/filter.controller.js"></script>
+	<script src="/components/charts/stacked/stacked.controller.js"></script>
+	<script src="/components/charts/interaction/interaction.controller.js"></script>
+	<script src="/components/profile/model/profile.controller.js"></script>
+	<script src="/components/profile/dataSource/dsProfile.controller.js"></script>
+	<!-- endinject -->
+</body>
+
+</html>

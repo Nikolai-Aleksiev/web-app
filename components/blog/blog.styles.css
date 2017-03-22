@@ -1,0 +1,29 @@
+#activities-view {
+    border: none;
+}
+
+.acitivities-item {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.acitivities-item-header {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    height: 16px;
+}
+
+.acitivities-item-header span {
+    float: right;
+    opacity: 0.7;
+}
+.acitivities-likes-count {
+    color: blue;
+}
+.acitivities-item-body {
+    padding: 20px 10px;
+}
+.activity-image {
+    width: 80px; 
+    height: 80px;
+}

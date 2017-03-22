@@ -1,0 +1,56 @@
+[
+   {
+      "pane": "pane1",
+      "title": "Key Partners",
+      "icon": "pencil",
+      "id": "key-partners"
+   },
+   {
+      "pane": "pane2",
+      "title": "Value Propositions",
+      "icon": "custom",
+      "id": "value-propositions"
+   },
+   {
+      "pane": "pane3",
+      "title": "Customer Segments",
+      "icon": "unlock",
+      "id": "customer-segments"
+   },
+   {
+      "pane": "pane4",
+      "title": "Key Activities",
+      "icon": "clock",
+      "id": "key-activities"
+   },
+   {
+      "pane": "pane5",
+      "title": "Key Resources",
+      "icon": "note",
+      "id": "key-resources"
+   },
+   {
+      "pane": "pane6",
+      "title": "Customer-Relationships",
+      "icon": "restore",
+      "id": "customer-relationships"
+   },
+   {
+      "pane": "pane7",
+      "title": "Channels",
+      "icon": "ungroup",
+      "id": "channels"
+   },
+   {
+      "pane": "pane8",
+      "title": "Cost-Structure",
+      "icon": "restore",
+      "id": "cost-structure"
+   },
+   {
+      "pane": "pane9",
+      "title": "Revenue-Streams",
+      "icon": "group",
+      "id": "revenue-streams"
+   }
+]

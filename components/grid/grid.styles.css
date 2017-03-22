@@ -1,0 +1,19 @@
+.myMenu {
+    display: inline-block;
+}
+
+.myMenu .emptyItem {
+    border-right-width: 0;
+}
+
+.myMenu .emptyItem > .k-link {
+    padding-left: 0 !important;
+}
+#grid td, #grid .k-grid-content {
+    overflow: visible;
+}
+#grid hr {
+    margin: 0;
+}
+
+

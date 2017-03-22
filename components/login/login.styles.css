@@ -1,0 +1,11 @@
+.login-page-title {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#login-button {
+    margin-top: 43px;
+    text-transform: uppercase; 
+}
