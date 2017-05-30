@@ -48,36 +48,46 @@ var app = app || {};
         app.routes = app.routes || {};
 
         // Actual mapping happens here
-        app.routes[state] = routeOptions.url;
+        app.routes[state] = routeOptions.uri;
 
         // Route to Telerik router object is being created
-        app.router.route(routeOptions.url, function () {
+        app.router.route(routeOptions.uri, function () {
 
             // Telerik MVVM model is created, later it will be passed to the view and the controller
             routeOptions.viewModel = kendo.observable({});
 
+            // If one would like to prefix the model properties in the view similar to 
+            // Angular way, one could pass here the instance and it will be bound to and passed later to the controller 
+            if (routeOptions.controllerAs) {
+
+                // Initialize the 'controllerAs' as empty object
+                routeOptions.viewModel.set(routeOptions.controllerAs, {});
+
+                // Attach it to the view options object
+                routeOptions.$ctrl = routeOptions.viewModel.get(routeOptions.controllerAs);
+
+                // here the passed user roles will be attached to the view model and later be accesible in the controller
+                // If 'controllerAs' is specified the subproperty will be passed
+                // Therefore the roles will be attached to this property
+                routeOptions.$ctrl.set("roles", routeOptions.roles);
+            }
+            else {
+
+                // If 'controllerAs' is not specified the roles will be attached 
+                // directly to the view model object
+                routeOptions.viewModel.set("roles", routeOptions.roles);
+            }
+
             app.viewLoaderService.loadView(routeOptions)
                 .then(function () {
 
-                    if (routeOptions.url == 'products') {
+                    var controllerStart = app[routeOptions.controller];
 
-                        server.service.getRoles(routeOptions.url)
-                            .then(function (response) {
-
-                                routeOptions.viewModel.set("roles", response.roles);
-
-                                var controllerStart = app[routeOptions.controller];
-
-                                controllerStart(routeOptions.viewModel);
-
-                            });
+                    if (routeOptions.$ctrl) {
+                        controllerStart(routeOptions.$ctrl);
                     }
                     else {
-
-                        var controllerStart = app[routeOptions.controller];
-
                         controllerStart(routeOptions.viewModel);
-
                     }
 
                 });
@@ -86,89 +96,47 @@ var app = app || {};
 
     app.navigate = function (route) {
 
-        var url = app.routes[route];
+        var uri = app.routes[route];
 
-        app.router.navigate(url);
+        app.router.navigate(uri);
     };
 
-    app.addRoute('Login', {
-        url: 'login',
-        templateUrl: '/components/login/login.view.html',
-        templateId: 'login-page-template',
-        controller: 'loginController',
-    });
-    app.addRoute('Register', {
-        url: 'register',
-        templateUrl: '/components/register/register.view.html',
-        templateId: 'register-page-template',
-        controller: 'registerController',
-    });
-    app.addRoute('Profile', {
-        url: 'profile',
-        templateUrl: '/components/profile/model/profile.view.html',
-        templateId: 'profile-page-template',
-        controller: 'profileController',
-    });
+    app.addDafaultRoutes = function () {
+        app.addRoute('Login', {
+            uri: 'login',
+            templateUri: '/components/login/login.view.html',
+            templateId: 'login-page-template',
+            controller: 'loginController',
+        });
+        app.addRoute('Register', {
+            uri: 'register',
+            templateUri: '/components/register/register.view.html',
+            templateId: 'register-page-template',
+            controller: 'registerController',
+        });
+        app.addRoute('Profile', {
+            uri: 'profile',
+            templateUri: '/components/profile/model/profile.view.html',
+            templateId: 'profile-page-template',
+            controller: 'profileController',
+            controllerAs: '$ctrl'
+        });
+        app.addRoute('DS Profile', {
+            uri: 'dsprofile',
+            templateUri: '/components/profile/dataSource/dsProfile.view.html',
+            templateId: 'ds-profile-page-template',
+            controller: 'dsProfileController',
+        });
+        app.addRoute('Logout', {
+            uri: 'logout',
+            templateUri: '/components/logout/logout.view.html',
+            templateId: 'logout-page-template',
+            controller: 'logoutController',
+        });
+    };
 
-    app.addRoute('DS Profile', {
-        url: 'dsprofile',
-        templateUrl: '/components/profile/dataSource/dsProfile.view.html',
-        templateId: 'ds-profile-page-template',
-        controller: 'dsProfileController',
-    });
+    app.addDafaultRoutes();
 
-        app.addRoute('Grid', {
-        url: 'grid',
-        templateUrl: '/components/grid/grid.view.html',
-        templateId: 'grid-page-template',
-        controller: 'gridController',
-    });
-
-
-
-
-    app.addRoute('Logout', {
-        url: 'logout',
-        templateUrl: '/components/logout/logout.view.html',
-        templateId: 'logout-page-template',
-        controller: 'logoutController',
-    });
-    app.addRoute('Chart Filtering', {
-        url: 'chart/filter',
-        templateUrl: '/components/charts/filter/filter.view.html',
-        templateId: 'filter-page-template',
-        controller: 'filterController',
-    });
-    app.addRoute('Blog', {
-        url: 'blog',
-        templateUrl: '/components/blog/blog.view.html',
-        templateId: 'blog-page-template',
-        controller: 'blogController',
-    });
-    app.addRoute('Stacked Chart', {
-        url: 'chart/stacked',
-        templateUrl: '/components/charts/stacked/stacked.view.html',
-        templateId: 'stacked-page-template',
-        controller: 'stackedController',
-    });
-    app.addRoute('Chart Interaction', {
-        url: 'chart/interaction',
-        templateUrl: '/components/charts/interaction/interaction.view.html',
-        templateId: 'interaction-page-template',
-        controller: 'interactionController',
-    });
-    app.addRoute('Advanced Filtering', {
-        url: 'chart/advanced-filtering',
-        templateUrl: '/components/charts/advanced/advanced.view.html',
-        templateId: 'advanced-page-template',
-        controller: 'advancedController',
-    });
-    app.addRoute('Dashboard', {
-        url: 'dashboard',
-        templateUrl: '/components/dashboard/dashboard.view.html',
-        templateId: 'dashboard-page-template',
-        controller: 'dashboardController',
-    });
 
 })();
 

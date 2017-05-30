@@ -1,0 +1,109 @@
+[
+    {
+        "userId": "9b23b020-12d9-11e7-b3db-832ba702681f",
+        "menu": [
+            {
+                "text": "Charts",
+                "items": [
+                    {
+                        "text": "Chart Filtering",
+                        "uri": "chart/filter",
+                        "templateUri": "/components/charts/filter/filter.view.html",
+                        "templateId": "filter-page-template",
+                        "controller": "filterController",
+                        "controllerAs": null,
+                        "items": null
+                    },
+                    {
+                        "text": "Stacked Chart",
+                        "uri": "chart/stacked",
+                        "templateUri": "/components/charts/stacked/stacked.view.html",
+                        "templateId": "stacked-page-template",
+                        "controller": "stackedController",
+                        "controllerAs": null,
+                        "items": null
+                    },
+                    {
+                        "text": "Chart Interaction",
+                        "uri": "chart/interaction",
+                        "templateUri": "/components/charts/interaction/interaction.view.html",
+                        "templateId": "interaction-page-template",
+                        "controller": "interactionController",
+                        "controllerAs": null,
+                        "items": null
+                    },
+                    {
+                        "text": "Advanced Filtering",
+                        "uri": "chart/advanced-filtering",
+                        "templateUri": "/components/charts/advanced/advanced.view.html",
+                        "templateId": "advanced-page-template",
+                        "controller": "advancedController",
+                        "controllerAs": null,
+                        "items": null
+                    }
+                ]
+            },
+            {
+                "text": "Dashboard",
+                "uri": "dashboard",
+                "templateUri": "/components/dashboard/dashboard.view.html",
+                "templateId": "dashboard-page-template",
+                "controller": "dashboardController",
+                "controllerAs": null,
+                "items": null
+            },
+            {
+                "text": "Grid",
+                "uri": "grid",
+                "templateUri": "/components/grid/grid.view.html",
+                "templateId": "grid-page-template",
+                "controller": "gridController",
+                "roles": [
+                    "read",
+                    "create"
+                ],
+                "controllerAs": "$ctrl",
+                "default": true,
+                "items": null
+            },
+            {
+                "text": "Blog",
+                "uri": "blog",
+                "templateUri": "/components/blog/blog.view.html",
+                "templateId": "blog-page-template",
+                "controller": "blogController",
+                "controllerAs": null,
+                "items": null
+            }
+        ]
+    },
+    {
+        "userId": "668820d4-12d9-11e7-be1f-a1a96c0feddb",
+        "menu": [
+            {
+                "text": "Grid",
+                "uri": "grid",
+                "templateUri": "/components/grid/grid.view.html",
+                "templateId": "grid-page-template",
+                "controller": "gridController",
+                "roles": [
+                    "read",
+                    "update",
+                    "delete"
+                ],
+                "controllerAs": "$ctrl",
+                "default": true,
+                "items": null
+            },
+            {
+                "text": "Blog",
+                "uri": "blog",
+                "templateUri": "/components/blog/blog.view.html",
+                "templateId": "blog-page-template",
+                "controller": "blogController",
+                "controllerAs": null,
+                "items": null
+            }
+        ]
+    }
+]

@@ -8,17 +8,17 @@
 
 	<!-- inject:css -->
 	<link rel="stylesheet" href="/components/blog/blog.styles.css">
+	<link rel="stylesheet" href="/components/grid/grid.styles.css">
 	<link rel="stylesheet" href="/components/dashboard/dashboard.styles.css">
 	<link rel="stylesheet" href="/components/login/login.styles.css">
 	<link rel="stylesheet" href="/components/logout/logout.styles.css">
 	<link rel="stylesheet" href="/components/register/register.styles.css">
-	<link rel="stylesheet" href="/components/grid/grid.styles.css">
 	<link rel="stylesheet" href="/components/charts/advanced/advanced.styles.css">
 	<link rel="stylesheet" href="/components/charts/filter/filter.styles.css">
-	<link rel="stylesheet" href="/components/charts/stacked/stacked.styles.css">
 	<link rel="stylesheet" href="/components/charts/interaction/interaction.styles.css">
-	<link rel="stylesheet" href="/components/profile/model/profile.styles.css">
+	<link rel="stylesheet" href="/components/charts/stacked/stacked.styles.css">
 	<link rel="stylesheet" href="/components/profile/dataSource/dsProfile.styles.css">
+	<link rel="stylesheet" href="/components/profile/model/profile.styles.css">
 	<!-- endinject -->
 
 	<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA/4QAAB7PGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiIRERAAAAIiIREiIRAAESIREiIiEQARERESIiIhARESIRESIiIRESIiEREiIhESIiIhESIiERIiIiERIiIREiIiERESIRESIiIREREREREiIRERERERESIhEREiERAREiERIiIRABEREhEiIhEAARERESIiEAAAAREREiAADwDwAAwAMAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAMADAADwDwAA"
@@ -51,17 +51,7 @@
 
 			<div class="col-sm-4">
 				<ul id="main-menu">
-					<li>Charts
-						<ul>
-							<li>Chart Filtering</li>
-							<li>Stacked Chart</li>
-							<li>Chart Interaction</li>
-							<li>Advanced Filtering</li>
-						</ul>
-					</li>
-					<li>Dashboard</li>
-					<li>Grid</li>
-					<li>Blog</li>
+					
 
 				</ul>
 			</div>
@@ -96,7 +86,7 @@
 	<section id='templates-container'>
 
 
-		<script id="successTemplate" type="text/x-kendo-template">
+		<script id="successTemplate" type="text/html">
 			<div class="update-success">
 				<img src="https://demos.telerik.com/kendo-ui/content/web/notification/success-icon.png" />
 				<h3>#= message #</h3>
@@ -108,22 +98,22 @@
 
 
 	<!-- inject:js -->
+	<script src="/components/blog/blog.controller.js"></script>
 	<script src="/components/core/app.js"></script>
 	<script src="/components/core/router.service.js"></script>
 	<script src="/components/core/settings.service.js"></script>
 	<script src="/components/core/view-loader.service.js"></script>
-	<script src="/components/blog/blog.controller.js"></script>
+	<script src="/components/grid/grid.controller.js"></script>
 	<script src="/components/dashboard/dashboard.controller.js"></script>
 	<script src="/components/login/login.controller.js"></script>
 	<script src="/components/logout/logout.controller.js"></script>
 	<script src="/components/register/register.controller.js"></script>
-	<script src="/components/grid/grid.controller.js"></script>
 	<script src="/components/charts/advanced/advanced.controller.js"></script>
 	<script src="/components/charts/filter/filter.controller.js"></script>
-	<script src="/components/charts/stacked/stacked.controller.js"></script>
 	<script src="/components/charts/interaction/interaction.controller.js"></script>
-	<script src="/components/profile/model/profile.controller.js"></script>
+	<script src="/components/charts/stacked/stacked.controller.js"></script>
 	<script src="/components/profile/dataSource/dsProfile.controller.js"></script>
+	<script src="/components/profile/model/profile.controller.js"></script>
 	<!-- endinject -->
 </body>
 

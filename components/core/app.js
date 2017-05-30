@@ -5,13 +5,10 @@ var app = app || {};
 $(document).ready(function () {
 
 	app.data = new Everlive({
-		appId: 'q01nsx8d9t5rb3vh',
+		appId: '0molvdjbqb3sulvq',
 		scheme: 'https',
 	});
 
-	$("#main-menu").kendoMenu({
-		select: app.menuNavigate
-	});
 	$(".account-menu").kendoMenu({
 		select: app.menuNavigate
 	});

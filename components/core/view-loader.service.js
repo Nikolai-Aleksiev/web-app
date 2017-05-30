@@ -19,7 +19,7 @@ var app = app || {};
 
             else {
 
-                return $.get(viewOptions.templateUrl)
+                return $.get(viewOptions.templateUri)
 
                     .then(function (template) {
 

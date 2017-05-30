@@ -1,15 +1,15 @@
-<script type="text/x-kendo-template" id="profile-page-template">
+<script type="text/html" id="profile-page-template">
 
     <div class="container" id='profile-container'>
 
         <div class='col-sm-6'>
 
             <div class="col-sm-8 col-sm-offset-2">
-                <label class="k-label" data-bind='text: displayNameText'></label>
+                <label class="k-label" data-bind='text: $ctrl.displayNameText'></label>
             </div>
 
             <div class="col-sm-8 col-sm-offset-2">
-                <input class="k-textbox full-width" data-bind='value: displayName' />
+                <input class="k-textbox full-width" data-bind='value: $ctrl.displayName' />
             </div>
 
         </div>
@@ -21,7 +21,7 @@
             </div>
 
             <div class="col-sm-8 col-sm-offset-2">
-                <input class="k-textbox full-width" data-bind='value: email' />
+                <input class="k-textbox full-width" data-bind='value: $ctrl.email' />
             </div>
 
         </div>
@@ -33,7 +33,7 @@
             </div>
 
             <div class="col-sm-8 col-sm-offset-2">
-                <input data-role='datepicker' class='full-width' data-bind='value: birthDay' />
+                <input data-role='datepicker' class='full-width' data-bind='value: $ctrl.birthDay' />
             </div>
 
         </div>
@@ -45,8 +45,8 @@
             </div>
 
             <div class="col-sm-8 col-sm-offset-2">
-                <input data-role="dropdownlist" class="full-width" data-bind='value: maritalStatus,
-                source: maritalStatuses' />
+                <input data-role="dropdownlist" class="full-width" data-bind='value: $ctrl.maritalStatus,
+                source: $ctrl.maritalStatuses' />
             </div>
 
         </div>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="col-sm-8 col-sm-offset-2">
-                <input class="k-textbox full-width" data-bind='value: address1' />
+                <input class="k-textbox full-width" data-bind='value: $ctrl.address1' />
             </div>
 
         </div>
@@ -71,7 +71,7 @@
             </div>
 
             <div class="col-sm-8 col-sm-offset-2">
-                <input data-role='dropdownlist' data-bind='value: gender, source: genders, events: { change: selectLabels }' class="full-width" />
+                <input data-role='dropdownlist' data-bind='value: $ctrl.gender, source: $ctrl.genders, events: { change: $ctrl.selectLabels }' class="full-width" />
             </div>
 
         </div>
@@ -83,7 +83,7 @@
             </div>
 
             <div class="col-sm-8 col-sm-offset-2">
-                <input class="k-textbox full-width" data-bind='value: address2' />
+                <input class="k-textbox full-width" data-bind='value: $ctrl.address2' />
             </div>
 
         </div>
@@ -95,7 +95,7 @@
             </div>
 
             <div class="col-sm-8 col-sm-offset-2">
-                <input name="files" type="file" data-role="upload" class="full-width" data-bind='events: { select: onSelect }' />
+                <input name="files" type="file" data-role="upload" class="full-width" data-bind='events: { select: $ctrl.onSelect }' />
             </div>
 
         </div>
@@ -103,7 +103,7 @@
         <div class='col-sm-6'>
 
             <div class="col-sm-8 col-sm-offset-2">
-                <button data-role='button' data-bind='events: { click: updateProfile }' class='full-width form-button update-profile-button k-primary'>Update Profile</button>
+                <button data-role='button' data-bind='events: { click: $ctrl.updateProfile }' class='full-width form-button update-profile-button k-primary'>Update Profile</button>
                 <div data-role="notification" id="update-notification"></div>
                 
             </div>

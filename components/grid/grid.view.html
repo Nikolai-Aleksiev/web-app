@@ -1,34 +1,77 @@
 <script type="text/x-kendo-template" id="grid-page-template">
 
-        <div id='grid'></div>
+
+    <div id='grid'></div>
+
+    <div id="window">
+
+        <div id='edit-items-container'>
+
+        </div>
+
+        <div>
+            <button id='update-button' class='k-primary'>Update</button>
+            <button id='cancel-button'>Cancel</button>
+        </div>
+
+
+
+    </div>
 
 
 </script>
 
+<script type="text/x-kendo-template" id="edit-items-2">
+    <div>
+        <label class='item-text'>Edit Id</label>
+    </div>
+    <input class='k-textbox item-id' value="#: id #" />
+
+
+</script>
+
+<script type="text/x-kendo-template" id="edit-items-3">
+    <div>
+        <label class='item-text'>Edit Text</label>
+    </div>
+    <input class='k-textbox item-text' data-bind="value: dataItem.text" />
+
+
+</script>
+
+<script type="text/x-kendo-template" id="edit-items-4">
+    <div>
+        <label class='item-text'>Edit Description</label>
+    </div>
+    <input class='k-textbox item-description' data-bind="value: dataItem.description" />
+</script>
+
 
 <script type="text/x-kendo-template" id="grid-template">
-                <div class="tabstrip">
-                    <ul>
-                        <li class="k-state-active">
-                           Orders
-                        </li>
-                        <li>
-                            Contact Information
-                        </li>
-                    </ul>
-                    <div>
-                        <div class="orders"></div>
-                    </div>
-                    <div>
-                        <div class='employee-details'>
-                            <ul>
-                                <li><label>Country:</label>Nederlands</li>
-                                <li><label>City:</label>Amsterdam</li>
-                                <li><label>Address:</label>Kalshoven</li>
-                                <li><label>Home Phone:</label>+31 998 455 660</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+    <div class="tabstrip">
+        <ul>
+            <li class="k-state-active">
+                Orders
+            </li>
+            <li>
+                Contact Information
+            </li>
+        </ul>
+        <div>
+            <div class="orders"></div>
+        </div>
+        <div>
+            <div class='employee-details'>
+                <ul>
+                    <li><label>Country:</label>Nederlands</li>
+                    <li><label>City:</label>Amsterdam</li>
+                    <li><label>Address:</label>Kalshoven</li>
+                    <li><label>Home Phone:</label>+31 998 455 660</li>
+                    <li><label>Text:</label>#: text #</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</script>
 
-            </script>
+
