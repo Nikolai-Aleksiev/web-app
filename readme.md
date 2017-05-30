@@ -4,16 +4,16 @@ This is Kendo UI Demo Application
 
 ## Getting Started
 
-Use 
+To download to local folder use.
 
 ```
 Git clone 
 ``` 
-to download it to local folder.
+
 
 ### Prerequisites and Installation
 
-To install the prerequisite files run the following
+To install the prerequisite files run.
 
 ```
 npm install
@@ -24,7 +24,7 @@ npm install gulp-inject
 
 ### Running
 
-To run the application use
+To run the application use.
 
 ```
 gulp serve
@@ -33,8 +33,6 @@ gulp serve
 The applicaition will run on port 8080
 
 To change the port set new port in gulpfile.js
-
-For example
 
 ```
   connect.server({
